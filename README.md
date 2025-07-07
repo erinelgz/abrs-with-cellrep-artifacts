@@ -22,7 +22,7 @@ undefined iptables and redefined it to use the legacy version.
 
 # Reproducibility
 
-Accessing the artifact(s) Our artifacts are open-source, and
+Accessing the artifact(s): Our artifacts are open-source, and
 publicly available on GitHub (Puffer, Mahimahi, and CellReplay).
 The ABR algorithms that we used are also included in Puffer’s repos-
 itory. They can be found in the "abr" directory, and models such
@@ -30,6 +30,7 @@ as Pensieve, Gelato, and TTP can be accessed in the "third_party"
 directory. Users can clone each project repository, apply the patches
 described in A.1, and configure each artifact following their docu-
 mentation.
+
 Experiment Workflow To conduct an experiment, the user has
 to initialize Puffer’s web client and media server, and in another
 terminal start a Mahimahi or CellReplay shell using the desired trace
@@ -40,17 +41,9 @@ packets on port 50001, which is the default port where Puffer sends
 video segments from the media server to the web client. After the
 test run, export Puffer’s logs and the captured TCP packets for
 analysis. Our methodology is explained in more detail in Section 3.
-Evaluation and Expected Result When comparing emulators,
-we did expect CellReplay to perform better due to its advanced
-design compared to Mahimahi. We observed some changes in RTT
-and delivery rate between emulators, but we also expected the SSIM
-and BufRatio rankings to change slightly. Instead, they remained
-constant with only a slight improvement when CellReplay is used.
-SSIM and BufRatio patterns for each ABR algorithm were nearly
-identical in Mahimahi and CellReplay when the same trace was
-used. There were slight deviations in the patterns that became clear
-when we took the mean values for each metric across all test runs.
-Experiment Customization For our ABR algorithm configura-
+
+
+Experiment Customization: For our ABR algorithm configura-
 tions, we used cubic congestion control algorithm, which is default
 in Ubuntu, but if desired, users can also use bbr, by modifying set-
 tings.yml file. In addition, we used the recommended configuration
