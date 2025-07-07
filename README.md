@@ -1,6 +1,6 @@
 # abrs-with-cellrep-artifacts
 
-We have added Puffer, CellReplay, and Mahimahi as zip files with the modifications made to their source codes. They are cloned from their original repositories, and used in experimentation with these modifications.
+We have added Puffer, CellReplay, and Mahimahi as zip files with the modifications made to their source codes. They are cloned from their original repositories, and used in experimentation with these modifications. It is advised to use the modified versions of these artifacts only if the user experiences the same problems in their environment.
 
 # Abstract
 
